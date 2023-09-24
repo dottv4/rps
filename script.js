@@ -3,22 +3,22 @@ function getComputerChoice() {
     return choice[Math.floor(Math.random() * choice.length)];
 }
 
-function game() {
     let roundsPlayed = 0;
     let playerScore = 0;
     let computerScore = 0;
     let rpsWinner = '';
 
-    for (i = 0; i < 5; i++) {
-        const playerSelection = prompt("Welcome to RPS enter your pick").toLowerCase();
+
+    // for (i = 0; i < 5; i++) {
+        let playerSelection;//const playerSelection =// const playerSelection = prompt("Welcome to RPS enter your pick").toLowerCase();
         const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
+        //console.log(playRound(playerSelection, computerSelection));
         console.log(`Player Win Totals ${playerScore}`);
         console.log(`Computer Win Totals ${computerScore}`);
-    }
+    // }
 
 
-   function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return `It's a draw! you both picked ${playerSelection}`; 
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
@@ -34,8 +34,8 @@ function game() {
       computerScore++  
         return `You lose! ${computerSelection} beats ${playerSelection}`;
     }
- }
-
+ 
+  }
  if (playerScore > computerScore) {
     rpsWinner = 'Winner winner chicken dinner!';
 } else if (playerScore === computerScore) {
@@ -44,6 +44,13 @@ function game() {
     rpsWinner = 'Lost to zeros and ones lul';
 }
 console.log(`And the winner is ${rpsWinner} !`);
-}
 
-game();
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    playerSelection = 'rock';
+    playRound;
+  })
+})
