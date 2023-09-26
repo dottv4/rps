@@ -1,13 +1,26 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<button id="rock">Rock</button>
-<button id="paper">Paper</button>
-<button id="scissors">Scissors</button>
-<button id="restart">Restart Game</button>
-<div>
-    <div id="divTwo"></div>
+<div class="container">
+   <div id="rndWin"></div>
+   <div id="beatBy"></div>
+   <div id="player">Player: 0</div>
+   <div id="computer">Computer: 0</div>
+   </div>
 </div>
-<div id="endgame"></div>
+<div class="btnContainer">
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+    <button id="reset">Reset</button>
+</div>
+<div class="gameOver"></div>
 <script src="script.js"></script>
 </body>
 </html>
